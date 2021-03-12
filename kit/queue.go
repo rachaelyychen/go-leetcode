@@ -33,3 +33,10 @@ func (q *Queue) Len() int {
 func (q *Queue) IsEmpty() bool {
 	return q.Len() == 0
 }
+
+func (q *Queue) Front() interface{} {
+	if len(q.arr) == 0 {
+		return nil
+	}
+	return q.arr[0]
+}
