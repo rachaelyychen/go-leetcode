@@ -24,11 +24,9 @@ func largestSumAfterKNegations(A []int, K int) int {
 	for i := range A {
 		res += A[i]
 	}
-	if K > 0 && K%2 == 1{
+	if K > 0 && K%2 == 1 {
 		res -= minNum
 		res += -minNum
 	}
 	return res
 }
-
-
