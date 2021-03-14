@@ -29,7 +29,7 @@ func (q *Queue) Len() int {
 	return len(q.arr)
 }
 
-// IsEmpty 反馈 q 是否为空
+// IsEmpty 返回 q 是否为空
 func (q *Queue) IsEmpty() bool {
 	return q.Len() == 0
 }
