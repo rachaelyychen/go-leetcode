@@ -29,7 +29,14 @@ func (s *Stack) Len() int {
 	return len(s.arr)
 }
 
-// IsEmpty 反馈 s 是否为空
+// IsEmpty 返回 s 是否为空
 func (s *Stack) IsEmpty() bool {
 	return s.Len() == 0
+}
+
+func (s *Stack) Top() interface{} {
+	if len(s.arr) == 0 {
+		return nil
+	}
+	return s.arr[len(s.arr)-1]
 }
