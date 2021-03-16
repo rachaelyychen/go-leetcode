@@ -1,6 +1,14 @@
 package kit
 
+import "container/heap"
+
 type IntMinHeap []int
+
+func NewIntMinHeap() *IntMinHeap {
+	h := &IntMinHeap{}
+	heap.Init(h)
+	return h
+}
 
 func (h IntMinHeap) Len() int {
 	return len(h)
@@ -29,6 +37,12 @@ func (h *IntMinHeap) Pop() interface{} {
 
 type IntMaxHeap []int
 
+func NewIntMaxHeap() *IntMaxHeap {
+	h := &IntMaxHeap{}
+	heap.Init(h)
+	return h
+}
+
 func (h IntMaxHeap) Len() int {
 	return len(h)
 }
@@ -45,7 +59,7 @@ func (h *IntMaxHeap) Push(x interface{}) {
 	*h = append(*h, x.(int))
 }
 
-func (h *IntMaxHeap) Pop() interface{}{
+func (h *IntMaxHeap) Pop() interface{} {
 	res := (*h)[len(*h)-1]
 	*h = (*h)[:len(*h)-1]
 	return res
