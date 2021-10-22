@@ -1,4 +1,4 @@
-package temp_pkg
+package main
 
 import (
 	"fmt"

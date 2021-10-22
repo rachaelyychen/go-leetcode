@@ -1,4 +1,4 @@
-package temp_pkg
+package main
 
 import (
 	"fmt"
@@ -16,7 +16,7 @@ import (
 **/
 
 func main() {
-	fmt.Println(replaceSpaceInStr("Here we are."))
+	fmt.Println(replaceSpace("Here we are."))
 	a1, a2 := [10]int{0, 2, 7, 8, 9}, [5]int{1, 3, 4, 5, 6}
 	merge2Array(&a1, &a2)
 	fmt.Println(a1)
@@ -24,7 +24,7 @@ func main() {
 
 // 实现一个函数，将字符串中的空格都替换为"%20"。
 // strings包下的Replace()、ReplaceAll()方法，也是通过拼接字符串实现替换的。
-func replaceSpaceInStr(s string) string {
+func replaceSpace(s string) string {
 	return strings.ReplaceAll(s, " ", "%20")
 }
 

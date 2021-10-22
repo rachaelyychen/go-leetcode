@@ -1,4 +1,4 @@
-package temp_pkg
+package main
 
 import "fmt"
 
@@ -18,10 +18,10 @@ import "fmt"
 // 过程中发现相同的数字则返回。
 
 func main() {
-	fmt.Println(duplicateNumber([]int{4, 3, 1, 0, 2, 3}))
+	fmt.Println(findRepeatNumber([]int{4, 3, 1, 0, 2, 3}))
 }
 
-func duplicateNumber(nums []int) int {
+func findRepeatNumber(nums []int) int {
 	for i := 0; i < len(nums); i++ {
 		if i != nums[i] {
 			if nums[nums[i]] == nums[i] {
