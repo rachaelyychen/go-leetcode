@@ -2,6 +2,16 @@ package main
 
 import . "go-leetcode/kit"
 
+/**
+* @project: go-leetcode
+*
+* @description:
+*
+* @author: rachaelyychen
+*
+* @create: 10/24/21 8:40 AM
+**/
+
 func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	head := new(ListNode)
 	p := head
