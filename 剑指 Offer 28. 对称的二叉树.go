@@ -1,8 +1,16 @@
 package main
 
-import (
-	. "go-leetcode/kit"
-)
+import . "go-leetcode/kit"
+
+/**
+* @project: go-leetcode
+*
+* @description:
+*
+* @author: rachaelyychen
+*
+* @create: 10/24/21 10:08 AM
+**/
 
 func isSymmetric(root *TreeNode) bool {
 	return isSymmetricTree(root, root)
