@@ -12,11 +12,14 @@ func treeToDoublyList(root *TreeNode) *TreeNode {
 	if root == nil {
 		return nil
 	}
-	var head *TreeNode
+	var head, tail *TreeNode
 	convertNode(root, &head)
+	tail = head
 	for head != nil && head.Left != nil {
 		head = head.Left
 	}
+	tail.Right = head
+	head.Left = tail
 	return head
 }
 
